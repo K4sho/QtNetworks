@@ -1,11 +1,12 @@
-#include "mainwindow.h"
+#include "myserver.h"
+#include <QtWidgets>
 #include <QApplication>
-#include "myclient.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    MyClient client("localhost", 2323);
-    client.show();
+    MyServer server(2323);
+    server.show();
+
     return a.exec();
 }
